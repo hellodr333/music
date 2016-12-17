@@ -1,0 +1,38 @@
+<div class="clearFix footCont" ng-controller="footerCtrl">
+	<div class="leftPart clearFix">
+		<img class="fl" ng-src="{{imgSrc}}" width="60" alt="">
+		<div class="audio fl">
+	    	<!-- /播放 暂停 等操作部分 -->
+	        <div class="play fl">
+				<img id="prev" src="img/back2.png" width="32" alt="" ng-click="prev()"/>
+				<img id="play" src="img/play2.png" width="32" alt=""  ng-click="play()" ng-show="toHide"/>
+				<img id="pause" src="img/stop.png" width="32" alt="" ng-click="pause()" ng-show="!toHide" />
+				<img id="next" src="img/forward2.png" width="32" alt="" ng-click="next()"/>
+	        </div>
+	    </div> 
+		 <audio id="audio" ng-src="{{musicSrc}}" style="width:200px;height:50px;">浏览器不支持音频文件!</audio> 
+	</div>
+ 
+  	<div class="middlePart">
+    	<div class="topDetail clearFix">
+    		<div class="fl">
+    			<span>{{songName}}</span>
+    			<i>-&nbsp;{{singer}}</i>
+    		</div>
+    		<div class="fr timer">
+        		<span class="" ng-bind="curTime"></span>/<i ng-bind="totalTime"></i>
+    		</div>
+    	</div>
+    	<div class="speed">
+            <div class="speed_buffer"></div>
+            <div class="speed_this" id="speed_this"><div class="button"></div></div>
+        </div>
+    </div>
+
+    <div class="rightPart">
+    	<span class="heart fl"></span>
+    	<span class="loop fl"></span>
+    	<span class="voice fl"></span>
+    	<span class="list fl"></span>
+    </div> 
+</div>

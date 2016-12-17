@@ -1,0 +1,13 @@
+
+<ul class="leftLsit"  ng-controller="leftCtrl" id="leftLsit">
+	<li ng-repeat="item in arr">
+		<a  ng-click="setIndex($index)" ui-sref="{{item.state}}" ui-sref-active="active" ui-sref-opts="{reload:'{{item.state}}'}" class="clearFix">
+		
+			<div class="fl">
+				<img ng-src="{{item.src}}" width="22" alt="">
+			</div>
+			<span class="fl" ng-bind="item.title"></span>
+		</a>
+	</li>
+	
+</ul>

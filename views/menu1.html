@@ -1,0 +1,26 @@
+<div class="infobox"  ng-controller="menu1Ctrl">
+	<div class="searchTop">
+		<input type="text" placeholder="搜索音乐 歌手 歌词 用户" name="">
+		<span></span>
+	</div>
+	<div class="displayBox clearFix">
+		<div class="fl leftDis">
+			<p>热门搜索</p>
+			<ul class="clearFix">
+				<li ng-repeat="item in hotItems" ng-bind="item.title"></li>
+			</ul>
+		</div>
+		<div class="fr rightDis" >
+			<p>搜索历史
+				<b></b>
+			</p>
+			<ul class="clearFix">
+				<li ng-repeat="item in historyItems" class="clearFix">
+					<span class="fl" ng-bind="item.title"></span>
+					<i class="fr" ng-click="removeHistory($index)"></i>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>

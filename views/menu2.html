@@ -1,0 +1,33 @@
+<div class="infobox discovery" ng-controller="menu2Ctrl">
+	<p>发现音乐</p>
+	<div class="tabHead">
+		<span ng-click="setList(0)" ng-class="{active:isShow(0)}"> 歌单</span>
+		<span ng-click="setList(1)" ng-class="{active:isShow(1)}"> 主播电台</span>
+	</div>
+	<div class="songList" ng-show="isShow(0)">
+		<div class="clearFix songListTop">
+			<p class="fl">
+				<button >全部歌单</button>
+				<span></span>
+			</p>
+			<ul class="fl">
+				<li class="fl" ng-repeat="title in songListCat" ng-bind="title">
+					
+				</li>
+			</ul>
+		</div>
+
+		<div class="songListBtm" >
+			<ul class="clearFix">
+				<li class="fl" ng-repeat="item in songListItems">
+					<img ng-src="{{item.src}}" width="100%">
+					<h5 ng-bind="item.title"></h5>
+					<p>by {{item.author}}</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="zhuboList" ng-show="isShow(1)">
+		<img src="img/pet1.jpg" width="80%" alt="">
+	</div>
+</div> 

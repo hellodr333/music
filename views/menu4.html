@@ -1,0 +1,38 @@
+
+<div class="infobox loveSongs" ng-controller="menu4Ctrl">
+	<div class="loveSongsTop clearFix">
+		<img class="fl" src="img/cd3.jpg" alt="" width="160">
+		<div class="fl loveSongsTopR">
+			<h4>我喜欢的音乐</h4>
+			<div class="clearFix loveSongsTopRCent">
+				<div class="fl"><img src="img/cd3.jpg" alt="" width="45"></div>
+				<span class="fl">自然的卷卷</span>
+				<i class="fl">2015-3-3 创建</i>
+			</div>
+			<ul class="clearFix loveSongsTopRBtm">
+				<li class="fl"><img src="img/folder.png" width="20" alt="">&nbsp;收藏</li>
+				<li class="fl"><img src="img/comment.png" width="20" alt="">&nbsp;评论</li>
+				<li class="fl"><img src="img/share.png" width="20" alt="">&nbsp;分享</li>
+				<li class="fl"><img src="img/download.png" width="20" alt="">&nbsp;下载全部</li>
+				<li class="fl"><img src="img/more.png" width="20" alt="">&nbsp;更多</li>
+			</ul>
+		</div>
+	</div>
+	<div class="loveSongsCont">
+		<div class="chooseSong clearFix">
+			<i class="fl"></i>
+			<span class="fl startPlay">播放全部 (189)</span>
+			<span class="fl chooseIcon">选择</span>
+		</div>
+		<ul class="loveSongList">
+			<li ng-repeat="item in loveSongItems" ng-class="{red:$even}">
+				<span class="fl order">{{$index | fillZero}}</span>
+				<span class="fl isLove"></span>
+				<p class="fl songName">{{item.songName}}<span  class="songNameIcon active"></span></p>
+				<span class="fl singer" ng-bind="item.singer"></span>
+				<span class="fl cdName" ng-bind="item.cdName"></span>
+				<span class="fl time" ng-bind="item.time"></span>
+			</li>
+		</ul>
+	</div>
+</div>

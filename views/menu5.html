@@ -1,0 +1,99 @@
+<div ng-controller="menu5Ctrl">
+	<div class="infobox memberInfo" >
+			<h4>请填写以下信息成为我们的会员哟~</h4>
+			<form  name="myform" class="form-horizontal " ng-submit="myform.$dirty && myform.$valid && submitForm(user)" ng-cloak novalidate>	
+				<div class="form-group row" ng-class="{'has-error':myform.name.$dirty && myform.name.$invalid}">
+					<label for="" class="col-sm-2 control-label">姓名</label>
+					<div class="input-group col-sm-10">
+						<input class="form-control" type="text" name="name" ng-model="user.name" required ng-minlength="2" ng-maxlength="4" ng-pattern="/^[a-zA-Z]{1}/" placeholder="请输入姓名(以字母开头)" autofocus="true"/>
+						<div ng-show="myform.name.$dirty && myform.name.$error.required" class="alert alert-danger help-block">必填项</div>
+						<div ng-show="myform.name.$dirty && myform.name.$error.minlength" class="alert alert-danger help-block">最小长度2</div>
+						<div ng-show="myform.name.$dirty && myform.name.$error.maxlength" class="alert alert-danger help-block">最大长度4</div>
+						<div ng-show="myform.name.$dirty && myform.name.$error.pattern" class="alert alert-danger help-block">开头请以字母</div>
+					</div>
+				</div>
+
+				<!-- 邮箱验证 -->
+				<div class="form-group row" ng-class="">
+					<label for="" class="col-sm-2 control-label">邮箱</label>
+					<div class="col-sm-10 input-group">
+						<input type="email" class="form-control" name="email" ng-model="user.email" placeholder="请输入邮箱(例：hello@163.com)" ng-pattern="/^\w+@[a-z0-9\-]{1,63}(\.[a-z]{2,6}){1,2}$/"/>
+						
+						<div ng-messages="myform.email.$error">   
+							<div ng-message="pattern" class="alert alert-danger help-block">邮箱格式不正确</div>  
+			            </div> 
+					</div>
+				</div>
+
+				<!-- 密码验证 -->
+				<div class="form-group" ng-class="">
+					<label for="" class="col-sm-2 control-label">请输入密码</label>
+					<div class="col-sm-10 input-group">
+						<input type="password" name="password1" class="form-control" ng-model="user.password"  ng-minlength="5" placeholder="请输入密码(不小于5位的数字或者字母)">
+						<div ng-messages="myform.password1.$error">
+							<span ng-message="minlength" class="alert alert-danger help-block">密码长度不能小于5位</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- 密码校验-->
+				<div class="form-group" ng-class="">
+					<label for="" class="col-sm-2 control-label">确认密码</label>
+					<div class="col-sm-10 input-group">
+						<input type="password" name="passwordConfim1" class="form-control" ng-model="user.passwordConfim" placeholder="请重复输入密码">
+						<div ng-show="myform.password1.$dirty && myform.passwordConfim1.$dirty && user.password != user.passwordConfim" class="alert alert-danger help-block">密码和确认密码不一致</div>
+					</div>
+				</div>
+
+				<!-- 年龄验证 -->
+				<div class="form-group" ng-class="">
+					<label class="col-sm-2 control-label">年龄</label>
+					<div class="col-sm-10 input-group">
+						<input type="number" min="18" max="80" class="form-control" name="age" ng-model="user.age" ng-pattern="/^[1-9]/" placeholder="请输入年龄"/>
+						<div ng-messages="myform.age.$error" ng-messages-multiple>
+							<span class="alert alert-danger help-block" ng-message="pattern">请输入数字</span>
+							<span class="alert alert-danger help-block" ng-message="min">年龄不得低于18</span>
+							<span class="alert alert-danger help-block" ng-message="max">年龄不得高于80</span>
+						</div>
+					</div>
+				</div>
+				<!-- 性别验证 -->
+				<div class="form-group" ng-class="">
+					<label class="col-sm-2 control-label">性别</label>
+					<div class="col-sm-10 input-group">
+						<label class="radio-inline">
+							<input type="radio" name="vender" ng-model="user.vender"  ng-value="false"/>男
+						</label>
+						<label class="radio-inline">
+							<input type="radio" name="vender" ng-model="user.vender"  ng-value="true"/>女
+						</label>
+					</div>
+				</div>
+				<!-- 爱好验证 -->
+				<div class="form-group" ng-class="">
+					<label class="col-sm-2 control-label">爱好</label>
+					<div class="col-sm-10 input-group">
+						<label class="checkbox-inline">
+							<input type="checkbox" name="hobby"  ng-click="setHobby(0)" ng-model="user.hobby.football" value="0"/>足球
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" name="hobby"  ng-click="setHobby(1)" ng-model="user.hobby.mountting" value="1"/>爬山
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" name="hobby"  ng-click="setHobby(2)" ng-model="user.hobby.swimming" value="2"/>游泳
+						</label>
+						<label class="checkbox-inline">
+							<input type="checkbox" name="hobby"  ng-click="setHobby(3)" ng-model="user.hobby.running" value="3"/>跑步
+						</label>
+					</div>
+				</div>
+				<!-- 爱好验证 -->
+
+				<div class="form-group  text-center">
+			        <input class="btn btn-primary btn-md" ng-disabled="myform.$invalid" type="submit" value="提交" />
+			       
+			    </div>
+			</form>
+	</div>
+
+</div>

@@ -1,0 +1,145 @@
+/* clear default */
+body, ul, ol, li, p, h1, h1, h3, h4, h5, h6, form, fieldset, table, td, img, div, dl, dt, dd, input { margin: 0; padding: 0; border: 0; }
+a{ text-decoration:none;}
+li{ list-style:none; }
+img, input, select, textarea, li{ vertical-align: top; }
+input, select, textarea{outline: none;}
+textarea{resize:none;}
+img, input{border:none;}
+.fl{ float:left;display:inline; }
+.fr{ float:right;display:inline; }
+.clearFix:after{ content:""; display:block; clear:both; }
+.clearFix{zoom:1;}
+body{font-family: "微软雅黑";font-style: normal;font-size:14px;color:#515151;overflow-y:hidden;overflow-x:auto;min-width:800px;}
+i{font-style:normal;}
+b{font-weight: normal}
+/*头部*/
+.head{height:42px;background:#bc2f2e;}
+.head-left, .head-right{height:100%;}
+.head-left span{width:17px;height:100%;background:url(../img/leftArror.png) left center no-repeat;margin-left:27px;}
+.head-left i{margin-left:46px;font-style:normal;color:white;line-height:42px;height:100%;}
+.head-right span{width:54px;height:100%;background:url(../img/small.png) left center no-repeat;}
+.head-right i{width:54px;height:100%;background:url(../img/big.png) left center no-repeat;margin-left}
+.head-right b{width:54px;height:100%;background:url(../img/close.png) left center no-repeat;}
+
+/*cont*/
+.cont{overflow:hidden;position:relative;padding-bottom:50px;}
+.menu{width:286px;background:#f3f3f5;height:100%;position:absolute;border-right:2px solid #e4e4e7;}
+.info{margin-left:286px;background:#fafafc;max-height:700px;overflow-y: auto;padding-bottom:230px;}
+.leftLsit {box-sizing:content-box;}
+.leftLsit li{height:60px;overflow:hidden;}
+.leftLsit a{display:inline-block;height:60px;width:102%;color:#515151;}
+.leftLsit a.active{background:#dddde1;border-left:3px solid #bc2f2e;}
+.leftLsit a:hover{background:#e8e8eb;}
+.leftLsit div{width:50px;height:100%;}
+.leftLsit span{width:236px;height:100%;line-height:60px;}
+.leftLsit img{margin-top:20px;margin-left:12px;}
+
+/*info*/
+.infobox{width:88%;padding-top:20px;margin:0 auto;}
+.searchTop{width:100%;height:50px;position:relative;border:2px solid #e4e4e7;overflow:hidden;}
+.searchTop input{width:100%;height:50px;font-size:16px;padding-left:32px;}
+.searchTop span{width:50px;height:32px;position:absolute;right:0;top:14px;background:url(../img/search.png) no-repeat left top;}
+.displayBox{margin-top:30px;}
+.displayBox>div{width:46%;}
+.displayBox p{width:100%;height:40px;border-bottom:2px solid #e4e4e7;font-weight: bold;}
+.leftDis li{height:32px;border:2px solid #e4e4e7;float:left;margin-right:12px;padding:0 14px;line-height:29px;border-radius:20px;margin-top:24px;}
+.rightDis b{position:absolute;right:0;top:0;width:28px;height:30px;background:url(../img/can.png) no-repeat left top;}
+.rightDis p{position:relative;}
+.rightDis i{width:24px;height:24px;background:url(../img/cha2.png) no-repeat left top;cursor:pointer;}
+.rightDis li{margin-top:24px;}
+
+.tabHead span.active{color:#bc2f2e;border-bottom:3px solid #bc2f2e;}
+.discovery p{font-size:12px;margin-bottom:20px;}
+.discovery .tabHead{border-bottom:2px solid #e4e4e7;margin-bottom: 28px;}
+.discovery .tabHead span{display:inline-block;margin-right:34px;height:38px;margin-bottom:-2px;}
+.songListTop p{position:relative;}
+.songListTop button{width:106px;height:30px;background:white;border:2px solid #e4e4e7;font-size:14px;}
+.songListTop span{background:url(../img/trign.png) no-repeat right center;position:absolute;right:-3px;top:-1px;width:30px;height:30px;}
+.songListTop ul{height:30px;margin-left:-2px;}
+.songListTop li{width:70px;font-size:12px;margin-top:10px;height:18px;text-align:center;border-left:2px solid #e4e4e7;}
+.songListBtm {overflow:hidden;margin-top:20px;}
+.songListBtm ul{width:110%;}
+.songListBtm li{width:28%;height:25%;margin-right:18px;margin-bottom:24px;border:1px solid #e4e4e7;}
+.songListBtm h5{text-align:center;height:16px;text-overflow: ellipsis;white-space:nowrap;overflow:hidden;}
+.songListBtm p{padding-left:10px;text-overflow: ellipsis;white-space:nowrap;overflow:hidden;}
+
+
+.quanziTop{border-bottom:2px solid #e4e4e7;margin-bottom: 28px;height:34px;}
+.quanziTop p{cursor: pointer;width:70px;height:23px;background:white;font-size: 13px;border-radius: 20px;border:2px solid #e4e4e7;padding-left:10px;}
+.addIcon span{color:#bc2f2e;}
+
+.headPartLeft{width:40px;height:40px;border-radius: 20px;overflow:hidden;margin-right:10px;}
+.headPartMiddle p{margin-bottom:5px;}
+.headPartMiddle i{color:#4983b7;cursor: pointer}
+.headPartRight p{cursor: pointer;width:54px;height:23px;font-size: 13px;background:white;border:2px solid #e4e4e7;padding-left:10px;}
+.headPartRight i{width:24px;height:24px;background:url(../img/down.png) no-repeat left top;cursor: pointer}
+.contPart{padding-left:40px;}
+.contPartArtcle p{height:24px;line-height:24px;margin-top:5px;font-size:12px;}
+.contPartMusic{height:60px;background:#e8e8eb;margin:20px 0;}
+.contPartMusic img{margin-top:10px;margin-left:10px;cursor: pointer;}
+.contPartMusic div{margin-top:10px;margin-left:10px;}
+.contPartMusic h6{font-size:15px;color:#bbb;}
+.contPartDown li{margin-right:4px;}
+.contPartlowlow{margin:20px 0;color:#8a8a8a;font-size:12px;}
+.contPartlowlow li{margin-right:6px;cursor: pointer}
+.contPartlowlow span{font-size:14px;}
+.quanziCont>li{padding-bottom:12px;border-bottom:2px solid #e4e4e7;margin-bottom:18px;}
+
+
+.loveSongsTop{background:url(../img/repeatB.png) repeat-x left bottom;}
+.loveSongsTop>img{margin-right:29px;}
+.loveSongsTopR h4{height:48px;font-size:20px;} 
+.loveSongsTopRCent{height:45px;margin-bottom:16px;}
+.loveSongsTopRCent div{width:45px;height:45px;border-radius: 50%;overflow:hidden;}
+.loveSongsTopRCent span{margin-left:10px;margin-right:10px;color:#8a8a8a;}
+.loveSongsTopRCent i{color:#cdcdcd;font-style: normal;}
+
+.loveSongsTopRBtm li{overflow:hidden;height:28px;padding:0 6px;border:2px solid #b2b1b5;line-height:28px;margin-right:8px;background:#e4e3e3;color:#707070;cursor: pointer;}
+.loveSongsTopRBtm li img{margin-top:5px;}
+.chooseSong{height:52px;padding-top:10px;}
+.chooseSong i{background:url(../img/play.png) left top no-repeat;width:20px;height:21px;margin-right:8px;}
+.chooseSong span{height:18px;line-height:18px;}
+.loveSongList li{height:50px;}
+.loveSongList li.red{background:#f3f3f5;} 
+.startPlay{padding-right:20px;border-right:2px solid #b2b1b5;}
+
+.order{width:6%;height:100%;line-height:50px;text-align:center;}
+.isLove{width:6%;height:100%;background:url(../img/heart.png) left center no-repeat;line-height:50px;}
+.songName{width:40%;height:100%;line-height:50px;text-align:left;text-overflow: ellipsis;white-space:nowrap;overflow:hidden;}
+.singer{width:20%;height:100%;line-height:50px;text-align:left;}
+.cdName{width:20%;height:100%;line-height:50px;text-align:left;text-overflow: ellipsis;white-space:nowrap;overflow:hidden;}
+.time{width:8%;height:100%;line-height:50px;text-align:left;}
+.songNameIcon{background:url(../img/table.png) no-repeat;background-position:-5px -154px;width:15px;height:12px;margin-left:6px;}
+.songNameIcon.active{display:inline-block;}
+.chooseIcon{padding-left:6px;}
+
+.memberInfo h4{margin-bottom:20px;font-size:13px;}
+.footer{height:60px;background:#eee;position:fixed;bottom:0;left:0;width:100%;overflow-x:auto;min-width:700px;} 
+.leftPart{width:254px;position:absolute;left:0;top:0;}
+#prev{margin-left:20px;margin-right:20px;margin-top:15px}
+#next{margin-left:20px;margin-right:20px;margin-top:15px}
+#play{margin-top:15px}
+#pause{margin-top:15px}
+.middlePart{margin:0 240px 0 254px;padding:0 10px;height:60px;}
+.rightPart{width:240px;position:absolute;right:0;top:0;height:44px;padding-top:16px;}
+.topDetail{padding-top:4px;font-size:14px;}
+.topDetail i{font-size:12px;}
+.speed{position:relative;margin-top:14px;height:2px;}
+.speed_buffer{background:#ccc;width:100%;height:2px;}
+.speed_this{width:0%;height:2px;background:#bc2f2e;position:absolute;left:0;top:0;}
+.button{width:10px;height:10px;border-radius:50%;background:#bc2f2e;margin-top:-5px;position:absolute;right:-10px;}
+.timer{font-size:12px;}
+.timer i{color:#bbb;}
+.rightPart span{width:25%;height:100%;}
+.heart{background:url(../img/heart.png) 10px center no-repeat; }
+.loop{background:url(../img/loop.png) left center no-repeat;}
+.voice{background:url(../img/voice.png) left center no-repeat;}
+.list{background:url(../img/list.png) left center no-repeat;}
+
+
+
+
+
+
+
