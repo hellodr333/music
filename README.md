@@ -6,10 +6,4 @@
 
 > angular-message来做表单验证
 
-
-```
-def max(x:Int,y:Int):Int = {
-  if (x>y) x
-  else y
-}
-```
+>可以打开链接浏览，速度可能很慢
