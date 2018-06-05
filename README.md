@@ -1,4 +1,7 @@
 
+# Install
+
+You can just download  this project zip files or use clone command, then run it!!!
 # musicPlayer
 用 angularJS 框架写的一个类似网易云音乐的web端播放器:
  
